@@ -1,0 +1,84 @@
+#empty dictionary
+empty = {}
+#pre-filled dictionary
+student = {"name": "rehan", "age": 16,"height": 5.8, "grade": "A", "school_name": "GBSSS JASOLA"}
+student2 = {"name": "arman", "age": 18, "height": 5.7, "grade": "A", "school_name": "GBSSS JASOLA"}
+#access by key
+print(student["name"])
+#using get() to avoid keyerror
+print(student.get("marks", 0))
+print(student["age"])
+print(student["height"])
+print(student["school_name"])
+
+print(student2["name"])
+print(student2["age"])
+print(student2["height"])
+print(student2["grade"])
+print(student2["school_name"])
+
+student["age"] = 18
+student["grade"] = "B"
+student["heigth"] = 6
+
+print(student)
+
+del student["height"]
+
+print(student)
+
+print(list(student.keys()))
+
+_________________________________________________________________________________________________________________________-
+
+# loopin dictionary
+for key in student:
+    print(key, student[key])
+for value in student.values():
+    print(value)
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+    ____________________________________________________________________________________________________________________-\
+
+    # exercise: student dictionary
+me = {"name": "Anwar", "age": 17, "subject": "maths"}
+for k, v in me.items():
+  print(f"{k}: {v}")
+
+  _____________________________________________________________________________________________________________________-___
+
+  #Essential Dictionary Methods
+marks = {"maths": 95, "science": 88}
+
+# Looping through items
+for subject, score in marks.items():
+    print(f"{subject}: {score}")
+
+# Getting all keys
+print(list(marks.keys()))     # ['maths', 'science']
+
+# .setdefault example
+marks.setdefault("english", 90)  # adds because missing
+marks.setdefault("maths", 0)     # does nothing (key exists)
+print(marks)
+
+________________________________________________________________________________________________________________________-
+
+#Nested Dictionaries
+class_10 = {
+    "rehan": {"maths": 95, "science": 88},
+    "arman": {"maths": 91, "science": 80}
+}
+
+# Access nested value
+aarav_science = class_10["rehan"]["science"]
+
+# Add new student
+class_10["Rohan"] = {"maths": 76, "science": 82}
+
+# Loop through nested dictionary
+for name, marks in class_10.items():
+    avg = sum(marks.values()) / len(marks)
+    print(f"{name}: Avg = {avg:.1f}")
+    ---------------------------------------------------------------------------------------------------------------------------------------------------
