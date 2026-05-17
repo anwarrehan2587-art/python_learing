@@ -1,0 +1,97 @@
+for i in range(1, 10):
+
+    if i == 4:
+        continue
+
+    if i == 5:
+        break
+
+    print(i)
+
+    #covert string to bool - caution bool("false") is true!
+
+value = input("enter true of false: ").lower()
+bool_val = value == "true"    # manual conversion
+print(bool_val)
+
+# mixing number and strings
+num = 42
+message = "the answer is " + str(num)
+print(message)
+
+#float to int (truncates)
+pi = 3.14159
+approx = int(pi)
+print(approx)
+
+nums = [2,5,1,8,3]
+
+#add/remove
+
+nums.append(9)
+nums.insert(1, 4)
+nums.remove(1)
+popped = num.pop(2)
+
+
+#sorting & searching
+
+nums.sort()
+nums.reverse()
+idx = nums.index(5)
+cnt = nums.count(4)
+
+#copy
+
+copy_list = nums.copy()
+print(num)
+print("pop:", popped,"| index of 5:", idx )
+
+
+squares = [x**2 for x in range(1,6)]  # [1,4,9,16,25]
+evens = [x for x in range(10) if x%2==0]
+print(squares)
+print(evens)
+
+
+colors = ("red", "green", "blue")
+print(colors[0])
+print(colors[-1])
+print(colors[:2])
+
+
+
+nums = (5,2,5,8,5)
+print(len(num))
+print(nums.count(5))
+print(nums.index(8))
+
+#unpacking
+a,b,c = (1,2,3)
+print(a,b,c)
+
+
+
+
+
+nums = {1,2,3,3,4,5,5}
+print(nums)
+
+nums.add(6)
+nums.remove(1)
+nums.discard(10)
+popped = nums.pop()
+
+print(len(nums), nums)
+
+
+
+
+a = {1,2,3,4}
+b = {3,4,5,6}
+
+print(a.union(b))
+print(a.intersection(b))
+print(a.difference(b))
+print(b.difference(a))
+print(a.symmetric_difference(b))
